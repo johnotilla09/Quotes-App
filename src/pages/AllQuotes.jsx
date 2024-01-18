@@ -1,5 +1,11 @@
+import { Fragment } from "react";
+
 const AllQuotes = () => {
-    return <h1>This is All Quotes Page</h1>;
+    return (
+        <Fragment>
+            <h1>This is All Quotes Page</h1>
+        </Fragment>
+    );
 };
 
 export default AllQuotes;
