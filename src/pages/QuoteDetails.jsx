@@ -26,7 +26,7 @@ const QuoteDetails = () => {
 
     if (!quote) {
         return (
-            <p>No quote found!</p>
+            <p className="centered">No quote found!</p>
         );
     }
 
