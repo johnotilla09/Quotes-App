@@ -3,7 +3,7 @@ import { Prompt } from "react-router-dom/cjs/react-router-dom.min";
 
 import Card from "../UI/Card";
 import LoadingSpinner from "../UI/LoadingSpinner";
-import classes from "./QuoteForm.module.css"
+import classes from "./QuoteForm.module.css";
 
 const QuoteForm = (props) => {
     const authorInputRef = useRef();
@@ -16,7 +16,7 @@ const QuoteForm = (props) => {
 
     const finishEnteringHandler = () => {
         setIsEntering(false);
-    }
+    };
 
     function submitFormHandler(event) {
         event.preventDefault();
@@ -24,7 +24,9 @@ const QuoteForm = (props) => {
         const enteredAuthor = authorInputRef.current.value;
         const enteredText = textInputRef.current.value;
 
-        // optional: Could validate here
+        if (enteredAuthor === "" || enteredText === "") {
+            return;
+        }
 
         props.onAddQuote({ author: enteredAuthor, text: enteredText });
     }
@@ -63,7 +65,9 @@ const QuoteForm = (props) => {
                         ></textarea>
                     </div>
                     <div className={classes.actions}>
-                        <button onClick={finishEnteringHandler} className="btn">Add Quote</button>
+                        <button onClick={finishEnteringHandler} className="btn">
+                            Add Quote
+                        </button>
                     </div>
                 </form>
             </Card>
