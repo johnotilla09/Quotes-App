@@ -29,6 +29,10 @@ function App() {
                     <NotFound/>
                 </Route>
             </Switch>
+
+            <footer className="footer">
+                <p>Alright Reserved 2024</p>
+            </footer>
         </Layout>
     );
 }

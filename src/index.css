@@ -6,6 +6,8 @@ body {
   font-family: sans-serif;
   margin: 0;
   background-color: #e7f8f8;
+  height: 100vh;
+  position: relative;
 }
 
 .centered {
@@ -53,4 +55,12 @@ body {
 .btn--flat:active {
   background-color: teal;
   color: white;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: gray;
+    text-align: center;
 }
